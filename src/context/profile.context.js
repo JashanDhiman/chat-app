@@ -39,7 +39,7 @@ export const ProfileProvider = ({ children }) => {
           setIsLoading(false);
         });
         database.ref('.info/connected').on('value', snapshot => {
-          if (snapshot.val() === false) {
+          if (!!snapshot.val() === false) {
             return;
           }
 
