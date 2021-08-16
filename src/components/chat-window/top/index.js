@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Icon, ButtonToolbar } from 'rsuite';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { useCurrentRoom } from '../../../context/current-room.context';
 import { useMediaQuery } from '../../../misc/custom-hooks';
 import RoomInfoBtnModal from './RoomInfoBtnModal';
@@ -11,7 +11,7 @@ const Top = () => {
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center">
-        <h4>
+        <h4 className="text-disappear d-flex align-items-center">
           <Icon
             componentClass={Link}
             to="/"
