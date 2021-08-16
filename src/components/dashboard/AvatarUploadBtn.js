@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Modal, Button, Alert } from 'rsuite';
 import AvatarEditor from 'react-avatar-editor';
 import { useModalState } from '../../misc/custom-hooks';
@@ -47,6 +47,7 @@ const AvatarUploadBtn = () => {
       }
     }
   };
+
   const onUploadClick = async () => {
     const canvas = avatarEditorRef.current.getImageScaledToCanvas();
 
@@ -88,6 +89,7 @@ const AvatarUploadBtn = () => {
         name={profile.name}
         className="width-200 height-200 img-fullsize font-huge"
       />
+
       <div>
         <label
           htmlFor="avatar-upload"

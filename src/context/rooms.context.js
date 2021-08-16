@@ -24,4 +24,5 @@ export const RoomsProvider = ({ children }) => {
     <RoomsContext.Provider value={rooms}>{children}</RoomsContext.Provider>
   );
 };
+
 export const useRooms = () => useContext(RoomsContext);

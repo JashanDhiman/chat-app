@@ -1,25 +1,32 @@
-import React from 'react';
-import { Switch } from 'react-router';
+import React, { lazy, Suspense } from 'react';
+
 import 'rsuite/dist/styles/rsuite-default.css';
+import './styles/main.scss';
+import { Switch } from 'react-router';
 import PrivateRoute from './components/PrivateRoute';
+import Home from './pages/Home';
 import PublicRoute from './components/PublicRoute';
 import { ProfileProvider } from './context/profile.context';
-import Home from './pages/Home/index';
-import SignIn from './pages/SignIn';
-import './styles/main.scss';
+import { ErrorBoundary } from './components/ErrorBoundary';
+
+const SignIn = lazy(() => import('./pages/SignIn'));
 
 function App() {
   return (
-    <ProfileProvider>
-      <Switch>
-        <PublicRoute path="/signin">
-          <SignIn />
-        </PublicRoute>
-        <PrivateRoute path="/">
-          <Home />
-        </PrivateRoute>
-      </Switch>
-    </ProfileProvider>
+    <ErrorBoundary>
+      <ProfileProvider>
+        <Switch>
+          <PublicRoute path="/signin">
+            <Suspense fallback={<div>Loading...</div>}>
+              <SignIn />
+            </Suspense>
+          </PublicRoute>
+          <PrivateRoute path="/">
+            <Home />
+          </PrivateRoute>
+        </Switch>
+      </ProfileProvider>
+    </ErrorBoundary>
   );
 }
 
