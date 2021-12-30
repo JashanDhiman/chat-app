@@ -66,6 +66,7 @@ export const ProfileProvider = ({ children }) => {
                 .set(authObj.uid);
             }
           } catch (err) {
+            // eslint-disable-next-line
             console.log('An error occurred while retrieving token. ', err);
           }
         }

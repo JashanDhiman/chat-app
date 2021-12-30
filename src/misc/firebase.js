@@ -8,13 +8,14 @@ import 'firebase/functions';
 import { isLocalhost } from './helpers';
 
 const config = {
-  apiKey: 'AIzaSyAKGRssxY4OW9um6RlSbbQ1Fh_lgdWfoPs',
-  authDomain: 'chat-web-app-4ee4c.firebaseapp.com',
-  databaseURL: 'https://chat-web-app-4ee4c.firebaseio.com',
-  projectId: 'chat-web-app-4ee4c',
-  storageBucket: 'chat-web-app-4ee4c.appspot.com',
-  messagingSenderId: '167319830934',
-  appId: '1:167319830934:web:419e220f9fdcd15ea25db7',
+  apiKey: 'AIzaSyDJZtfMJ97aFxbcs9TR-cP3LifAkuGJkd8',
+  authDomain: 'chat-web-app-36298.firebaseapp.com',
+  databaseURL:
+    'https://chat-web-app-36298-default-rtdb.asia-southeast1.firebasedatabase.app',
+  projectId: 'chat-web-app-36298',
+  storageBucket: 'chat-web-app-36298.appspot.com',
+  messagingSenderId: '176117343307',
+  appId: '1:176117343307:web:80a6798f5607b01921d9ce',
 };
 
 export const fcmVapidKey =
