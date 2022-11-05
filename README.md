@@ -17,7 +17,7 @@ Stack:
 
 ### Pull and install
 
-1. Clone this repo by running `git clone https://github.com/shelooks16/chat-app.git`
+1. Clone this repo by running `git clone https://github.com/JashanDhiman/chat-app.git`
 2. Install dependencies for both cloud functions and React frontend by running `npm install && cd functions && npm install`
 
 ### Important
